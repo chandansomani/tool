@@ -10,7 +10,7 @@ From this directory:
 dotnet run
 ```
 
-The HTTP launch profile listens on `http://localhost:5250`. In Development, the OpenAPI document is available at `http://localhost:5250/openapi/v1.json`.
+The HTTP launch profile listens on `http://localhost:5250`.
 
 ## Endpoints
 
