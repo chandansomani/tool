@@ -1,0 +1,51 @@
+@backend_HostAddress = http://localhost:5250
+
+### List supported categories and units
+GET {{backend_HostAddress}}/api/v1/units
+Accept: application/json
+
+### Convert meters to feet
+POST {{backend_HostAddress}}/api/v1/conversions
+Content-Type: application/json
+
+{
+	"category": "length",
+	"fromUnit": "meter",
+	"toUnit": "foot",
+	"value": 1
+}
+
+### Convert Fahrenheit to Celsius
+POST {{backend_HostAddress}}/api/v1/conversions
+Content-Type: application/json
+
+{
+	"category": "temperature",
+	"fromUnit": "fahrenheit",
+	"toUnit": "celsius",
+	"value": 98.6
+}
+
+### Convert kilograms to pounds
+POST {{backend_HostAddress}}/api/v1/conversions
+Content-Type: application/json
+
+{
+	"category": "mass",
+	"fromUnit": "kilogram",
+	"toUnit": "pound",
+	"value": 1
+}
+
+### Invalid unit returns 400 Problem Details
+POST {{backend_HostAddress}}/api/v1/conversions
+Content-Type: application/json
+
+{
+	"category": "length",
+	"fromUnit": "meter",
+	"toUnit": "lightyear",
+	"value": 1
+}
+
+###
