@@ -51,6 +51,14 @@ Category and unit identifiers are case-insensitive. Results are rounded to 12 de
 - Temperature: `celsius`, `fahrenheit`, `kelvin`
 - Mass (`weight` alias): `kilogram`, `gram`, `milligram`, `metric-ton`, `ounce`, `pound`
 
+## Use cases
+
+See [UseCases.md](UseCases.md) for sample client scenarios, request payloads, and example responses for successful and invalid conversions.
+
+## Adding new units
+
+Follow [AddingNewConversions.md](AddingNewConversions.md) when you need to add a new conversion unit or category to the API.
+
 ## Project layout
 
 ```text
